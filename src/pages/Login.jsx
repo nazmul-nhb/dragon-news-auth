@@ -20,12 +20,12 @@ const Login = () => {
         login(email, password)
             .then(result => {
                 console.log(result.user);
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.error(error);
             })
         e.target.reset();
-        navigate(location.state)
     }
 
     return (
