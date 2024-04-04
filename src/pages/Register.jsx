@@ -1,16 +1,33 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Navbar from "./shared/Navbar";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
 
+    const { createUser } = useContext(AuthContext)
+
+    const handleRegister = e => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const name = form.get('name');
+        const email = form.get('email');
+        const password = form.get('password');
+        createUser(email, password)
+        .then(result=>{
+            console.log(result.user);
+        })
+        .catch(error=>{
+            console.error(error);
+        })
+    }
     return (
-        <div className="bg-[#F3F3F3] p-8">
+        <div className="bg-[#F3F3F3] p-4">
             <Navbar></Navbar>
             <section className="space-y-6 flex flex-col justify-center items-center mt-8">
-                <form className="flex flex-col gap-6 w-1/2 p-24 bg-white">
+                <form onSubmit={handleRegister} className="flex flex-col gap-6 w-1/2 p-24 bg-white rounded-md">
                     <h2 className="text-2xl font-medium">Please, Register</h2>
                     <label htmlFor="name">Your Name</label>
                     <input className="p-2 rounded-lg bg-[#F3F3F3]" type="text" name="name" placeholder="Your Name" required />

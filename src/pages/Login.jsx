@@ -14,10 +14,10 @@ const Login = () => {
     }
 
     return (
-        <div className="bg-[#F3F3F3] p-8">
+        <div className="bg-[#F3F3F3] p-4">
             <Navbar></Navbar>
             <section className="space-y-6 flex flex-col justify-center items-center mt-8">
-                <form onSubmit={handleLogin} className="flex flex-col gap-6 w-1/2 p-24 bg-white">
+                <form onSubmit={handleLogin} className="flex flex-col gap-6 w-1/2 p-24 bg-white rounded-md">
                 <h2 className="text-2xl font-medium">Login to your account</h2>
                     <label htmlFor="email">Email</label>
                     <input className="p-2 rounded-lg bg-[#F3F3F3]" type="email" name="email" placeholder="Enter Your Email" required />
