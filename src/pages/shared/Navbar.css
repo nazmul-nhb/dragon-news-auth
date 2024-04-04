@@ -1,24 +1,24 @@
-a.active {
+nav a.active {
     transition: 1s;
     border: 1px solid #D72050;
     background-color: white !important;
     color: #D72050 !important;
 }
 
-a.pending {
+nav a.pending {
     transition: 1s;
     border: 1px solid #D72050 !important;
     background-color: #D72050 !important;
     color: white !important;
 }
 
-li a:hover {
+nav li a:hover {
     border: 1px solid #D72050 !important;
     background-color: #D72050 !important;
     color: white !important;
 }
 
-li a {
+nav li a {
     border: 1px solid transparent;
     padding: 6px 8px;
     border-radius: 8px;
