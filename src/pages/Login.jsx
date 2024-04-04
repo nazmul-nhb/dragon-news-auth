@@ -1,11 +1,13 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Navbar from "./shared/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
     const { login } = useContext(AuthContext)
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -22,7 +24,8 @@ const Login = () => {
             .catch(error => {
                 console.error(error);
             })
-        e.target.reset()
+        e.target.reset();
+        navigate(location.state)
     }
 
     return (
