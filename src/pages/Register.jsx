@@ -12,16 +12,16 @@ const Register = () => {
     const handleRegister = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
-        const name = form.get('name');
+        // const name = form.get('name');
         const email = form.get('email');
         const password = form.get('password');
         createUser(email, password)
-        .then(result=>{
-            console.log(result.user);
-        })
-        .catch(error=>{
-            console.error(error);
-        })
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
     return (
         <div className="bg-[#F3F3F3] p-4">
