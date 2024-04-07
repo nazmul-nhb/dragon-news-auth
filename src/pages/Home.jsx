@@ -19,7 +19,7 @@ const Home = () => {
                 </div>
                 {/* News Container */}
                 <div className="col-span-2 ">
-                    <h2 className="text-4xl">Dragon News Home</h2>
+                    <h2 className="text-xl text-[#403F3F] font-semibold">Dragon News Home</h2>
                     {
                         news?.map(aNews => <NewsCard
                             key={aNews._id}
