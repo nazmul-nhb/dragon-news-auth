@@ -18,7 +18,8 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/news/:_id',
-                element: <PrivateRoute><News></News></PrivateRoute>
+                element: <PrivateRoute><News></News></PrivateRoute>,
+                loader: () => fetch('/news.json')
             },
             {
                 path:'/login',
