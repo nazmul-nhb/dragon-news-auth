@@ -15,8 +15,6 @@ const News = () => {
         setSingleNes(filteredNews);
     }, [_id, news]);
 
-
-
     return (
         <div>
             <Header></Header>
@@ -26,8 +24,8 @@ const News = () => {
                     <h3 className="text-xl text-[#403F3F] font-semibold mb-5">Dragon News</h3>
                     <div className="flex flex-col gap-4 border border-[#E7E7E7] p-8">
                         <img className="w-full rounded-md mb-4" src={singleNews.image_url} alt={singleNews.title} />
-                        <div className="">{singleNews.title}</div>
-                        <div className="">{singleNews.details}</div>
+                        <h2 className="text-2xl font-bold text-[#403F3F]">{singleNews.title}</h2>
+                        <div className="text-[#706F6F]">{singleNews.details}</div>
                     </div>
                 </div>
                 <RightNav></RightNav>

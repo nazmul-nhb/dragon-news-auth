@@ -5,6 +5,8 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import News from "../pages/News";
 import PrivateRoute from "./PrivateRoute";
+import Career from "../pages/Career";
+import About from "../pages/About";
 
 export const router = createBrowserRouter([
     {
@@ -28,6 +30,14 @@ export const router = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/about',
+                element: <About></About>
+            },
+            {
+                path:'/career',
+                element:<Career></Career>
             }
         ]
     }

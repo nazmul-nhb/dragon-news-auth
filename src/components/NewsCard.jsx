@@ -17,7 +17,7 @@ const NewsCard = ({ aNews }) => {
     }, [rating, star]);
 
     return (
-        <div className='my-8 border border-[#E7E7E7]'>
+        <div className='my-5 border border-[#E7E7E7]'>
             <div className='bg-[#F3F3F3] p-4 flex justify-between items-center'>
                 <div className='flex gap-4 items-center'>
                     <img className='w-10 h-10 rounded-full' src={author.img} alt={author.name} />
